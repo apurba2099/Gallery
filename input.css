@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    height: 100vh;
+    margin: 0;
+  }
+
+  #typewriter {
+    border-right: 2px solid #333;
+    white-space: nowrap;
+    overflow: hidden;
+  }
