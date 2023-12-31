@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./Js/index.js" defer></script>
 </head>
 <body class="font-mono bg-[#080a1d]">
 
@@ -13,10 +14,10 @@
 
     <nav id="home" class="p-2 bg-[#101220] flex justify-between items-center m-2 rounded-lg shadow-lg shadow-cyan-500/50">
         <div class="logo p-1 text-xl font-bold text-white justify-center flex">
-            <img src="./images/icons8-fire-100.png" class="w-10" alt="logo">
-            <span class="flex justify-center flex-col">AnimeWorld</span>
+            <img src="./images/icons8-fire-100.png" class="w-10"  id="logo" alt="logo">
+            <span class="flex justify-center flex-col text-2xl">AnimeWorld</span>
         </div>
-        <div class="items hidden md:block">
+        <!-- <div class="items hidden md:block">
             <ul class="flex text-white">
               <li class="m-2 p-2 hover:underline underline-offset-8 decoration-white"> <a href="#home">Home</a></li>
                 <li class="m-2 p-2 hover:underline underline-offset-8 decoration-white"> <a href="#character">Character</a></li>
@@ -24,27 +25,74 @@
                 <li class="m-2 p-2 hover:underline underline-offset-8 decoration-white"> <a href="#character">Specific Details</a></li>
                 <li class="m-2 p-2 hover:underline underline-offset-8 decoration-white"> <a href="#character">Contact</a></li>
             </ul>
-        </div>
-        <div class="md:hidden cursor-pointer">
+        </div> -->
+        <!-- <div class="md:hidden cursor-pointer">
             <div class="line h-0.5 w-6 m-1.5 bg-white"></div>
             <div class="line h-0.5 w-6 m-1.5 bg-white"></div>
             <div class="line h-0.5 w-6 m-1.5 bg-white"></div>
-        </div>
+        </div> -->
+
+
+            <!-- Desktop Menu Items -->
+            <div
+            class="hidden items-center space-x-10 uppercase text-gray-600 md:flex"
+          >
+          <ul class="flex text-white">
+            <li class="m-2 p-2 hover:underline underline-offset-8 decoration-white"> <a href="#character">Home</a></li>
+              <li class="m-2 p-2 hover:underline underline-offset-8 decoration-white"> <a href="#character">Character</a></li>
+              <li class="m-2 p-2 hover:underline underline-offset-8 decoration-white"> <a href="#character">About</a></li>
+              <li class="m-2 p-2 hover:underline underline-offset-8 decoration-white"> <a href="#character">Specific Details</a></li>
+              <li class="m-2 p-2 hover:underline underline-offset-8 decoration-white"> <a href="#character">Contact</a></li>
+          </ul>
+            <a
+              href="#"
+              class="px-8 py-2 font-bold text-white bg-[#4a2b89] rounded-lg shadow-md hover:text-[#4a2b89] hover:bg-white"
+              >Get Start</a
+            >
+          </div>
+
+        <!-- Hamburger Button -->
+        <button
+          id="menu-btn"
+          class="z-30 block md:hidden focus:outline-none hamburger"
+        >
+          <span  class="hamburger-top"></span >
+          <span  class="hamburger-middle"></span >
+          <span  class="hamburger-bottom"></span >
+        </button>
+      </nav>
+      
+        <!-- Mobile Menu -->
+      <div
+      id="menu"
+      class="fixed inset-0 hidden z-20 flex-col items-center self-end w-full h-full md:h-screen px-6 py-1 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-gray-500 opacity-90 bg-[#4a2b89]"
+    >
+      <div class="w-full py-3 text-center">
+        <a href="#home">Home</a>
+      </div>
+      <div class="w-full py-3 text-center">
+        <a href="#home">Home</a>
+      </div>
+      <div class="w-full py-3 text-center">
+        <a href="#home">Home</a>
+      </div>
+      <div class="w-full py-3 text-center">
+        <a href="#" class="block hover:text-teal-500">Login</a>
+      </div>
+    </div>
     </nav>
-
-
+<!-- NAV END -->
 
     <!-- hero -->
-    <script src="./index.js"></script>
      <div class="slider flex flex-col-reverse bg-[#101220] shadow-lg shadow-cyan-500/50 md:flex-row m-2 rounded-lg md:my-14 md:rounded-lg">
+      
         <div class="left flex flex-col justify-center md:px-9">
-
             <h1 class="text-3xl font-bold mx-5 p-2 text-[#a196c3] md:font-bold md:text-4xl" id="typewriter">ANIME WORLD!</h1>
             <p class="w-3/4 mx-5 p-2 text-[#a196c3] font-bold md:text-2xl">Explore the Multiverse of Anime Legends: A Comprehensive Character Gallery featuring Iconic Heroes and Villains from Every Anime Series!</p>
 
             <div class="btn flex md:flex-row ">
                 <button
-                    class="mx-6 mt-3 mb-5 bg-[#4a2b89] text-white hover:bg-blue-950 shadow-lg shadow-cyan-500/50 px-3 py-2 w-fit font-semibold rounded-md">Click the button!</button>
+                    class="mx-6 mt-3 mb-5 bg-[#4a2b89] text-white hover:bg-white shadow-lg shadow-cyan-500/50 hover:text-[#4a2b89] font-bold px-3 py-2 w-fit rounded-md">Click the button!</button>
             </div>
         </div>
         <div class="right md:m-0">

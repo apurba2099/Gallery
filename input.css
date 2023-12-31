@@ -2,13 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    height: 100vh;
-    margin: 0;
-  }
+/* HAMBURGER MENU */
 
-  #typewriter {
-    border-right: 2px solid #333;
-    white-space: nowrap;
-    overflow: hidden;
+.hamburger {
+    @apply relative cursor-pointer w-10 h-6 transition-all duration-200;
+  }
+  
+  .hamburger-top,
+  .hamburger-middle,
+  .hamburger-bottom {
+    content: "";
+    @apply absolute top-0 left-0 w-6 h-[3px] bg-white rotate-0 transition-all duration-500;
+  }
+  
+  .hamburger-middle {
+    @apply translate-y-2;
+  }
+  
+  .hamburger-bottom {
+    @apply translate-y-4 bg-white;
+  }
+  
+  .open {
+    @apply fixed right-12 translate-y-0;
+  }
+  
+  .open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+    background-color: #fff;
+  }
+  .open .hamburger-middle {
+    @apply hidden;
+  }
+  .open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+    background-color: #fff;
   }

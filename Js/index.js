@@ -1,4 +1,5 @@
-const phrases = ["Anime World🔥!!", "Explore anime verse", "Explore character"];
+// DYNAMIC AUTO_WRITING
+const phrases = ["Anime World🔥", "Explore anime verse", "Explore character"];
   let currentPhraseIndex = 0;
   let currentCharIndex = 0;
   let isDeleting = false;
@@ -28,3 +29,16 @@ const phrases = ["Anime World🔥!!", "Explore anime verse", "Explore character"
   document.addEventListener("DOMContentLoaded", function () {
     type(); // Start typing when the page loads
   });
+
+  const btn = document.getElementById("menu-btn");
+const menu = document.getElementById("menu");
+const logo = document.getElementById("logo");
+
+// Hamburger button listener
+btn.addEventListener("click", navToggle);
+
+function navToggle() {
+  btn.classList.toggle("open");
+  menu.classList.toggle("flex");
+  menu.classList.toggle("hidden");
+}
